@@ -1,0 +1,2 @@
+Configuration,Recall@4,Answer_Correctness,Citation_Correctness,Abstention_Accuracy,Unsupported_Claim_Rate
+Held-out Test (chunk=500),1.0,0.75,0.2,1.0,0.0

@@ -1,0 +1,7 @@
+pymupdf
+sentence-transformers
+faiss-cpu
+groq
+pandas
+numpy
+streamlit

@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "split": "val",
+    "question": "What are the dimensions of keys and values (d_k and d_v) in the base Transformer model?",
+    "reference_answer": "In the base Transformer model with h=8 parallel attention heads, d_k = d_v = d_model / h = 64.",
+    "expected_source": "1706.03762v7 (1).pdf",
+    "answerable": true
+  },
+  {
+    "id": 2,
+    "split": "val",
+    "question": "How does REALM pre-train its knowledge retriever without labeled retrieval examples?",
+    "reference_answer": "REALM trains the retriever using Masked Language Modeling (MLM) as an unsupervised signal, rewarding retrievals that improve the prediction of masked tokens.",
+    "expected_source": "2002.08909v1.pdf",
+    "answerable": true
+  },
+  {
+    "id": 3,
+    "split": "val",
+    "question": "Which retriever architecture and document index does RAG use in the original paper?",
+    "reference_answer": "RAG uses Dense Passage Retrieval (DPR) as its retriever and a non-parametric dense vector index of Wikipedia accessed with a pre-trained neural retriever.",
+    "expected_source": "2005.11401v4.pdf",
+    "answerable": true
+  },
+  {
+    "id": 4,
+    "split": "val",
+    "question": "How does LoRA reduce the number of trainable parameters during fine-tuning?",
+    "reference_answer": "LoRA freezes the pre-trained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture.",
+    "expected_source": "2106.09685v2.pdf",
+    "answerable": true
+  },
+  {
+    "id": 5,
+    "split": "val",
+    "question": "What is Chain-of-Thought prompting?",
+    "reference_answer": "Chain-of-thought prompting provides a few-shot exemplars containing a series of intermediate natural language reasoning steps that lead to the final output.",
+    "expected_source": "2201.11903v6.pdf",
+    "answerable": true
+  },
+  {
+    "id": 6,
+    "split": "val",
+    "question": "What U-shaped performance curve is observed in the Lost in the Middle paper?",
+    "reference_answer": "Language model performance is highest when relevant information occurs at the very beginning or end of the input context, and significantly degrades when it is in the middle.",
+    "expected_source": "2307.03172v3.pdf",
+    "answerable": true
+  },
+  {
+    "id": 7,
+    "split": "val",
+    "question": "What special tokens does Self-RAG generate to critique its own retrieval and generation?",
+    "reference_answer": "Self-RAG generates special reflection tokens, including retrieval tokens and critique tokens (such as IsRel, IsSup, and IsUse), to evaluate retrieved passages and its own output.",
+    "expected_source": "2310.11511v1.pdf",
+    "answerable": true
+  },
+  {
+    "id": 8,
+    "split": "val",
+    "question": "What was the exact training cost in US dollars for GPT-4?",
+    "reference_answer": "Insufficient evidence in the provided documents to answer this question.",
+    "expected_source": null,
+    "answerable": false
+  },
+  {
+    "id": 9,
+    "split": "test",
+    "question": "Why does the Transformer architecture replace recurrence with self-attention?",
+    "reference_answer": "Self-attention allows significantly more parallelization during training and reduces the path length between long-range dependencies to a constant number of operations.",
+    "expected_source": "1706.03762v7 (1).pdf",
+    "answerable": true
+  },
+  {
+    "id": 10,
+    "split": "test",
+    "question": "Why does LoRA introduce no additional inference latency compared to a fully fine-tuned model?",
+    "reference_answer": "Because the trainable low-rank matrices can be explicitly merged with the frozen weights before deployment, resulting in the exact same architecture during inference.",
+    "expected_source": "2106.09685v2.pdf",
+    "answerable": true
+  },
+  {
+    "id": 11,
+    "split": "test",
+    "question": "At what model scale do the benefits of Chain-of-Thought prompting typically emerge?",
+    "reference_answer": "Chain-of-thought prompting is an emergent ability that yields substantial performance gains primarily in large models of roughly 100 billion parameters or more.",
+    "expected_source": "2201.11903v6.pdf",
+    "answerable": true
+  },
+  {
+    "id": 12,
+    "split": "test",
+    "question": "How does Self-RAG differ from standard RAG regarding when retrieval happens?",
+    "reference_answer": "Unlike standard RAG which always retrieves a fixed number of passages, Self-RAG adaptively decides on demand whether retrieval is necessary using reflection tokens.",
+    "expected_source": "2310.11511v1.pdf",
+    "answerable": true
+  },
+  {
+    "id": 13,
+    "split": "test",
+    "question": "What decoding procedure does RAG-Sequence use to combine probabilities across retrieved documents?",
+    "reference_answer": "RAG-Sequence uses Thorough Decoding (running separate beam searches for each document and scoring hypotheses) or Fast Decoding.",
+    "expected_source": "2005.11401v4.pdf",
+    "answerable": true
+  },
+  {
+    "id": 14,
+    "split": "test",
+    "question": "Which Python library is recommended for building the web interface in Streamlit?",
+    "reference_answer": "Insufficient evidence in the provided documents to answer this question.",
+    "expected_source": null,
+    "answerable": false
+  },
+  {
+    "id": 15,
+    "split": "test",
+    "question": "How many parameters does the Llama-3-70B model have in its embedding layer?",
+    "reference_answer": "Insufficient evidence in the provided documents to answer this question.",
+    "expected_source": null,
+    "answerable": false
+  },
+  {
+    "id": 16,
+    "split": "test",
+    "question": "What is the recommended chunk overlap size for legal contracts in Europe?",
+    "reference_answer": "Insufficient evidence in the provided documents to answer this question.",
+    "expected_source": null,
+    "answerable": false
+  }
+]
